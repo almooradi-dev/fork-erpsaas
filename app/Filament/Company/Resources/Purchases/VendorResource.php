@@ -88,11 +88,9 @@ class VendorResource extends Resource
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('last_name')
                                     ->label('Last Name')
-                                    ->required()
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('email')
                                     ->label('Email')
-                                    ->required()
                                     ->email()
                                     ->columnSpanFull()
                                     ->maxLength(255),
