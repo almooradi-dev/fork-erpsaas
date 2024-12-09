@@ -239,7 +239,7 @@ class BillResource extends Resource
                                     ->hiddenLabel()
                                     ->content(function (Forms\Get $get) {
                                         $quantity = max((float) ($get('quantity') ?? 0), 0);
-                                        $unitPrice = max((float) ($get('unit_price') ?? 0), 0);
+                                        $unitPrice = (float) ($get('unit_price') ?? 0);
                                         $purchaseTaxes = $get('purchaseTaxes') ?? [];
                                         $purchaseDiscounts = $get('purchaseDiscounts') ?? [];
 
