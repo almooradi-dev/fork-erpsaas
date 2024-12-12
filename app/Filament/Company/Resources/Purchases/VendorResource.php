@@ -148,6 +148,7 @@ class VendorResource extends Resource
                             ->maxLength(255),
                         Forms\Components\TextInput::make('city')
                             ->label('City')
+                            ->required()
                             ->maxLength(255),
                         Forms\Components\TextInput::make('state')
                             ->label('State')
