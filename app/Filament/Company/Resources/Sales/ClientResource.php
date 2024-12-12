@@ -50,11 +50,9 @@ class ClientResource extends Resource
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('last_name')
                                     ->label('Last Name')
-                                    ->required()
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('email')
                                     ->label('Email')
-                                    ->required()
                                     ->email()
                                     ->columnSpanFull()
                                     ->maxLength(255),
@@ -70,21 +68,18 @@ class ClientResource extends Resource
                                             ->schema([
                                                 Forms\Components\TextInput::make('number')
                                                     ->label('Phone')
-                                                    ->required()
                                                     ->maxLength(15),
                                             ])->maxItems(1),
                                         Forms\Components\Builder\Block::make('mobile')
                                             ->schema([
                                                 Forms\Components\TextInput::make('number')
                                                     ->label('Mobile')
-                                                    ->required()
                                                     ->maxLength(15),
                                             ])->maxItems(1),
                                         Forms\Components\Builder\Block::make('toll_free')
                                             ->schema([
                                                 Forms\Components\TextInput::make('number')
                                                     ->label('Toll Free')
-                                                    ->required()
                                                     ->maxLength(15),
                                             ])->maxItems(1),
                                         Forms\Components\Builder\Block::make('fax')
@@ -142,7 +137,6 @@ class ClientResource extends Resource
                                 Forms\Components\TextInput::make('email')
                                     ->label('Email')
                                     ->required()
-                                    ->email()
                                     ->maxLength(255),
                                 PhoneBuilder::make('phones')
                                     ->hiddenLabel()
@@ -155,7 +149,6 @@ class ClientResource extends Resource
                                             ->schema([
                                                 Forms\Components\TextInput::make('number')
                                                     ->label('Phone')
-                                                    ->required()
                                                     ->maxLength(255),
                                             ])->maxItems(1),
                                     ])
@@ -188,15 +181,12 @@ class ClientResource extends Resource
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('state')
                                     ->label('State')
-                                    ->required()
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('postal_code')
                                     ->label('Postal Code / Zip Code')
-                                    ->required()
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('country')
                                     ->label('Country')
-                                    ->required()
                                     ->maxLength(255),
                             ])->columns(),
                     ])
@@ -206,13 +196,11 @@ class ClientResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('recipient')
                             ->label('Recipient')
-                            ->required()
                             ->maxLength(255),
                         Forms\Components\Hidden::make('type')
                             ->default('shipping'),
                         Forms\Components\TextInput::make('phone')
                             ->label('Phone')
-                            ->required()
                             ->maxLength(255),
                         CustomSection::make('Shipping Address')
                             ->contained(false)
@@ -230,15 +218,12 @@ class ClientResource extends Resource
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('state')
                                     ->label('State')
-                                    ->required()
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('postal_code')
                                     ->label('Postal Code / Zip Code')
-                                    ->required()
                                     ->maxLength(255),
                                 Forms\Components\TextInput::make('country')
                                     ->label('Country')
-                                    ->required()
                                     ->maxLength(255),
                                 Forms\Components\Textarea::make('notes')
                                     ->label('Delivery Instructions')

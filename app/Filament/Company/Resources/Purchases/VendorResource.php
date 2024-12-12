@@ -106,21 +106,18 @@ class VendorResource extends Resource
                                             ->schema([
                                                 Forms\Components\TextInput::make('number')
                                                     ->label('Phone')
-                                                    ->required()
                                                     ->maxLength(15),
                                             ])->maxItems(1),
                                         Forms\Components\Builder\Block::make('mobile')
                                             ->schema([
                                                 Forms\Components\TextInput::make('number')
                                                     ->label('Mobile')
-                                                    ->required()
                                                     ->maxLength(15),
                                             ])->maxItems(1),
                                         Forms\Components\Builder\Block::make('toll_free')
                                             ->schema([
                                                 Forms\Components\TextInput::make('number')
                                                     ->label('Toll Free')
-                                                    ->required()
                                                     ->maxLength(15),
                                             ])->maxItems(1),
                                         Forms\Components\Builder\Block::make('fax')
@@ -151,19 +148,15 @@ class VendorResource extends Resource
                             ->maxLength(255),
                         Forms\Components\TextInput::make('city')
                             ->label('City')
-                            ->required()
                             ->maxLength(255),
                         Forms\Components\TextInput::make('state')
                             ->label('State')
-                            ->required()
                             ->maxLength(255),
                         Forms\Components\TextInput::make('postal_code')
                             ->label('Postal Code / Zip Code')
-                            ->required()
                             ->maxLength(255),
                         Forms\Components\TextInput::make('country')
                             ->label('Country')
-                            ->required()
                             ->maxLength(255),
                     ])
                     ->columns(2),
